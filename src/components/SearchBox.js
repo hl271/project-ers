@@ -19,11 +19,12 @@ class Searchbox extends React.Component {
         });
     }
     render() {
+        let searchValue = this.props.searchValue
         return (
             <div className={this.props.className}>
                 <InputGroup>
-                    <input type="text" className="form-control" onChange={this.props.searchChange}/>
-                    <InputGroupAddon addonType="append"><Button color="danger">Search</Button></InputGroupAddon>
+                    <input type="text" className="form-control" onChange = {this.props.searchChange}/>
+                    <InputGroupAddon addonType="append"><Button color="danger" onClick = {() => this.props.submitSearch()}>Search</Button></InputGroupAddon>
                 </InputGroup>
             </div>
         )

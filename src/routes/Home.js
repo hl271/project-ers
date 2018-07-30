@@ -7,13 +7,25 @@ import Project from '../components/Project'
 
 
 class Home extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            searchBox: {
+                searchField: ""
+            }
+        }
+    }
+    onSearchChange =  (event) => {
+        this.setState({searchBox: {searchField: event.target.value}})
+        console.log(event.target.value)
+    }
     render() {
         return (
             <div>
                 <Jumbotron fluid>
                 <Container>
                     <h2 className="m-3 text-center">Search your next projects</h2>
-                    <Searchbox className="mx-auto" />
+                    <Searchbox className="mx-auto" searchChange={this.props.searchChange} submitSearch={() => this.props.submitSearch()}/>
                 </Container>
                 </Jumbotron>
                 <div className="main mx-5">

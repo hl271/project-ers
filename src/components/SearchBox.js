@@ -19,7 +19,6 @@ class Searchbox extends React.Component {
         });
     }
     render() {
-        let searchValue = this.props.searchValue
         return (
             <div className={this.props.className}>
                 <InputGroup>

@@ -9,6 +9,7 @@
 # production
 /build
 /src/config
+*.test.js
 
 # misc
 .DS_Store
